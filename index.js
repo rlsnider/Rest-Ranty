@@ -1,6 +1,9 @@
+//dependencies
 require('dotenv').config()
 const express = require('express')
 const app= express()
+
+app.use('/places', require('./controllers/places'))
 
 //Home page
 app.get('/', (req, res)=> {
