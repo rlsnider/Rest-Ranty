@@ -5,6 +5,8 @@ function Def (html) {
         <html>
             <head>
                 <title>Title</title>
+                <link rel="stylesheet" href='https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.min.js' />
+                <link rel="stylesheet" href="/css/styles.css" />
             </head>
             <body>
                 {html.children}
