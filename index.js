@@ -12,12 +12,12 @@ app.use('/places', require('./controllers/places'))
 
 //Home page
 app.get('/', (req, res)=> {
-    console.log('home page')
+    
     res.render('home')
 })
 //Wildcard route/error page
 app.get('*', (req, res)=> {
-    console.log('error page')
+    
     res.render('error404')
 })
 app.listen(process.env.PORT, ()=> {

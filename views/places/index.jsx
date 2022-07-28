@@ -4,17 +4,25 @@ const Def = require('../default')
 function index(data) {
     let placesFormatted = data.places.map((place) => {
      return (
-        <div key={index}>
+        <div key={index} id="place-img" >
             <h2>{place.name}</h2>
+            <p className="text-center">
+                {place.cuisines}
+            </p>
             <img src={place.pic} alt={place.name} />
+            <p className="text-center">
+                Located in (place.city), {place.state}
+            </p>
         </div>
      )
     })
     return (
         <Def>
                 <main>
-                    <h1>Welcome to the Index Page</h1>
+                    <h1>Places to Rant and Rave About!</h1>
+                    <div className="row">
                       {placesFormatted}
+                    </div>
                 </main>
             
         </Def>

@@ -2,4 +2,21 @@ h1 {
     text-align: center;
     color: cornflowerblue;
   }
-  
+
+#chia-fruit-shake {
+    display: inline-block;
+    height:50%;
+    width: auto;
+    border:3px solid blue;
+}
+#errordog {
+  border: 2px solid lightblue;
+}
+img {
+  border: 2px solid lightblue;
+
+}
+#place-img {
+  border: 1px solid black;
+
+}
