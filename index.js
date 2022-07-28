@@ -1,7 +1,15 @@
+require('dotenv').config()
 const express = require('express')
 const app= express()
 
+//Home page
 app.get('/', (req, res)=> {
     res.send('Hello world!')
 })
-app.listen(3000)
+//Wildcard route/error page
+app.get('*', (req, res)=> {
+    res.send('error404')
+})
+app.listen(process.env.PORT, ()=> {
+    console.log('Wakey, Wakey')
+})
