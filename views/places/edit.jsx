@@ -3,7 +3,7 @@ const Def = require('../default.jsx')
 
 function edit_form (data) {
     return (
-        <Def>
+        <Def key={data}>
           <main>
             <h1>Edit Place</h1>
             
@@ -15,12 +15,12 @@ function edit_form (data) {
                         className="form-control" 
                         id="name" 
                         name="name" 
-                        value={data.place.name} 
+                        defaultValue={data.place.name} 
                         required />
                     </div>
                     <div className="form-group col-sm-6">
-                        <label htmlFor="pic">Place Picrture</label>
-                        <input className="form-control" type="url" id="pic" name="pic" />
+                        <label htmlFor="pic">Place Picture</label>
+                        <input className="form-control"  id="pic" name="pic" />
                     </div>
                 </div>
                 <div className="row">
@@ -37,7 +37,7 @@ function edit_form (data) {
                         <label htmlFor="cuisines">Cuisines</label>
                         <input className="form-control" id="cuisines" name="cuisines" required />
                     </div>
-                    <input className="btn btn-primary" type="submit" value="Add Place" />
+                    <input className="btn btn-primary" type="submit" value="Edit" />
              </form>
           </main>
         </Def>

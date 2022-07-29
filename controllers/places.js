@@ -24,6 +24,24 @@ router.post('/', (req, res)=> {
   places.push(req.body)
   res.redirect('/places')
 })
+//Edit
+router.get('/:id/edit', (req, res) => {
+  let id = Number(req.params.id)
+  if (isNaN (id)) {
+    res.render('error404')
+  }
+  else if (!places[id]) {
+    res.render('error404')
+  }
+  else {
+    let data ={
+      place: places[id],
+      id:id
+    }
+    res.render('places/edit', data)
+  }
+})
+
 //Show an individual page
 router.get('/:id', (req, res)=> {
   console.log("just hit the show route")
@@ -41,23 +59,7 @@ router.get('/:id', (req, res)=> {
 })
 
 
-//Edit
-router.get('/:id/edit', (req, res) => {
-  let id = Number(req.params.id)
-  if (isNan(id)) {
-    res.render('error404')
-  }
-  else if (!places[id]) {
-    res.render('error404')
-  }
-  else {
-    let data ={
-      place: places[id],
-      id:id
-    }
-    res.render('places/edit', data)
-  }
-})
+
 //PUT
 router.put('/:id', (req, res) => {
   let id = Number(req.params.id)
