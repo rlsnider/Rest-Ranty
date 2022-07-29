@@ -10,6 +10,19 @@ function Def (html) {
             </head>      
         
             <body>
+                <nav>
+                    <ul>
+                        <li>
+                            <a href="/">HOME</a>
+                        </li>
+                        <li>
+                            <a href="/places">PLACES</a>
+                        </li>
+                        <li>
+                            <a href="/places/new">ADD PLACE</a>
+                        </li>
+                    </ul>
+                </nav>
                 {html.children}
             </body>
         </html>
